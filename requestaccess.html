@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Access</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 360px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #896fc9;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            border: none;
+            border-bottom: 1px solid #dadce0;
+            background: transparent;
+            outline: none;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        label {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            font-size: 16px;
+            color: #80868b;
+            pointer-events: none;
+            transition: 0.2s ease all;
+        }
+
+        input:focus ~ label,
+        input:valid ~ label,
+        textarea:focus ~ label,
+        textarea:valid ~ label {
+            top: -20px;
+            font-size: 12px;
+            color: #1a73e8;
+        }
+
+        .contact-button {
+            width: 100%;
+            padding: 10px 0;
+            background-color: #896fc9;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background-color: #d6307c;
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #1a73e8;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Request Access</h1>
+    <p>Just complete the form below and send us a message.</p>
+    <form>
+        <div class="input-group">
+            <input type="text" id="name" required>
+            <label for="name">Name*</label>
+        </div>
+        <div class="input-group">
+            <input type="text" id="designation" required>
+            <label for="designation">Designation*</label>
+        </div>
+        <div class="input-group">
+            <input type="text" id="company" required>
+            <label for="company">Company*</label>
+        </div>
+        <div class="input-group">
+            <input type="email" id="email" required>
+            <label for="email">Email ID*</label>
+        </div>
+        <div class="input-group">
+            <textarea id="comment"></textarea>
+            <label for="comment">Comment</label>
+        </div>
+        <button type="submit" class="contact-button">Submit</button>
+    </form>
+    <a href="#" class="back-link">Back To Signup Options</a>
+</div>
+
+</body>
+</html>

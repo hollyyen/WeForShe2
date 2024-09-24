@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Sign In</title>
+     <link rel="stylesheet" href="styles.css">
+ </head>
+   <style>
+   body {
+       font-family: Arial, sans-serif;
+       background-color: #f2f2f2;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 100vh;
+       margin: 0;
+   }
+
+   .container {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       width: 100%;
+   }
+
+   .signin-card {
+       background-color: #fff;
+       padding: 40px;
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+       border-radius: 8px;
+       width: 360px;
+       text-align: center;
+   }
+
+   .logo {
+
+   }
+
+   .signin-title {
+       font-size: 30px;
+     font-family: system-ui, -apple-system, BlinkMacSystemFont,  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+       margin-bottom: 20px;
+     margin-top: -10px;
+       color: #896fc9;
+   }
+     .signin-title2 {
+          font-size: 15px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont,  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          margin-bottom: 20px;
+        margin-top: -10px;
+          color: #aaaaaa;
+      }
+   .input-group {
+       position: relative;
+       margin-bottom: 30px;
+       text-align: left;
+   }
+
+   input[type="email"],
+   input[type="password"] {
+       width: 100%;
+       padding: 10px 0;
+       font-size: 16px;
+       border: none;
+       border-bottom: 1px solid #dadce0;
+       background: transparent;
+       outline: none;
+   }
+
+   label {
+       position: absolute;
+       top: 10px;
+       left: 0;
+       font-size: 16px;
+       color: #80868b;
+       pointer-events: none;
+       transition: 0.2s ease all;
+   }
+
+   input:focus ~ label,
+   input:valid ~ label {
+       top: -20px;
+       font-size: 12px;
+       color: #1a73e8;
+   }
+
+   .signin-button {
+       width: 100%;
+       padding: 10px 0;
+       background-color: #896fc9;
+       color: #fff;
+       font-size: 16px;
+       border: none;
+       border-radius: 4px;
+       cursor: pointer;
+       transition: background-color 0.3s ease;
+   }
+
+   .signin-button:hover {
+       background-color: #155ab6;
+   }
+</style>
+ <body>
+     <div class="container">
+         <div class="signin-card">
+             <img src="" alt="" class="logo">
+             <h1 class="signin-title">Welcome Back!</h1>
+           <h4 class="signin-title2">Login to your Account</h4>
+             <form>
+                 <div class="input-group">
+                     <input type="email" id="email" name="email" required>
+                     <label for="email">Email or phone</label>
+                 </div>
+                 <div class="input-group">
+                     <input type="password" id="password" name="password" required>
+                     <label for="password">Password</label>
+                 </div>
+                 <button type="submit" class="signin-button">Sign in </button>
+             </form>
+         </div>
+     </div>
+ </body>
+ </html>

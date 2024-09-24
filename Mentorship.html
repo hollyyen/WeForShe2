@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentorship Program</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo img {
+        width: 120px;
+        height: auto;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #896fc9;
+        font-size: 18px;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: #e84393;
+    }
+
+    .nav-buttons {
+        display: flex;
+        gap: 15px;
+    }
+
+    .login-button, .register-button {
+        padding: 10px 25px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .login-button {
+        background-color: #896fc9;
+        color: #fff;
+    }
+
+    .login-button:hover {
+        background-color: #e84393;
+        transform: scale(1.05);
+    }
+
+    .register-button {
+        background-color: #896fc9;
+        color: #fff;
+    }
+
+    .register-button:hover {
+        background-color: #e84393;
+        transform: scale(1.05);
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 20px;
+    }
+    #programs {
+        padding: 50px 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        border-radius: 10px;
+        background-image: url('https://static.vecteezy.com/system/resources/previews/004/461/981/large_2x/teenage-school-friends-flat-illustration-schoolgirls-with-books-together-cartoon-characters-on-white-background-teen-schoolchildren-going-to-school-with-bags-and-textbooks-stylish-students-vector.jpg');
+        background-position: 880px 100px ;
+        background-repeat: no-repeat;
+    }
+    #programs1 {
+        padding: 50px 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        border-radius: 10px;
+        
+        background-image: url('https://static.vecteezy.com/system/resources/previews/004/461/981/large_2x/teenage-school-friends-flat-illustration-schoolgirls-with-books-together-cartoon-characters-on-white-background-teen-schoolchildren-going-to-school-with-bags-and-textbooks-stylish-students-vector.jpg');
+        background-position: 880px 100px ;
+        background-repeat: no-repeat;
+    }
+
+    #programs h1 {
+        color: #896fc9;
+        font-size: 36px;
+        margin-bottom: 30px;
+        text-align: center;
+        
+    } #programs1 h1 {
+        color: #896fc9;
+        font-size: 36px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+
+    .program-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+    }
+    .program1-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .program1 {
+        width: calc(50% - 20px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAUvEoNc4MFrIE-alP2w00NNSDp9o2jpxCRQ&s');
+        background-position: 830px 10px ;
+        background-repeat: no-repeat;
+        background-color: #ffffff;
+    
+    }
+    .program {
+        width: calc(50% - 20px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        
+        margin-bottom: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        background-color:#ffffff;
+
+    }
+    .program1 :hover {
+        transform: scale(1.05);
+        background-color:#ffffff;
+    }
+    
+    .program1 h2 {
+        color: #e84393;
+        font-size: 24px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .program1 p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .program1 span {
+        font-weight: bold;
+        color: #896fc9;
+    }
+
+    .program:hover {
+        transform: scale(1.05);
+        background-color:#ffffff;
+    }
+
+    .program h2 {
+        color: #e84393;
+        font-size: 24px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .program p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .program span {
+        font-weight: bold;
+        color: #896fc9;
+    }
+
+    .teachers {
+        padding: 50px 20px;
+        background-color: #fffffa;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 30px;
+        border-radius: 10px;
+    }
+
+    .teachers h2 {
+        text-align: center;
+        color: #896fc9;
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .teacher-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .teacher {
+        width: 255px;
+        text-align: center;
+        margin: 10px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .teacher img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    .teacher h3 {
+        color: #896fc9;
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+
+    .teacher p {
+        font-size: 16px;
+        color: #555;
+    }
+    .enrollment {
+        flex: 1;
+        text-align: center;
+        padding: 20px;
+        margin: 20px;
+        background-color: #e84393;
+        color: #fff;
+        border-radius: 10px;
+    }
+
+    .enrollment h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .enrollment p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .enrollment button {
+        padding: 10px 25px;
+        font-size: 18px;
+        background-color: #fff;
+        color: #e84393;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .enrollment button:hover {
+        background-color: #f4f4f4;
+        transform: scale(1.05);
+    }
+</style>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="/Mentorship.html">About Us</a></li>
+            <li><a href="/investors.html" target="blank">About Investors</a></li>
+            <li><a href="/Inspiring.html">For Founders</a></li>
+            <li> <a href="/contac.html" target="blank">Contact Us </a></li>
+        </ul>
+        <div class="nav-buttons">
+            <a href="/login_2.html" target="blank"><button class="login-button">Login</button></a>
+            <a href="/register.html" target="blank"><button class="register-button">Registration</button></a>
+        </div>
+    </nav>
+    <img src="https://www.startupindia.gov.in/content/dam/invest-india/States-images/office-desk-animation.gif"
+        height="550" alt="office desk animation">
+   
+    <div class="container">
+       
+        <div class="content">
+           
+                <div id="programs">
+                    <h1>Our Mentorship Programs</h1>
+                    <div class="program-grid">
+                        <div class="program1">
+                            <h2>Coding Bootcamp</h2>
+                            <p>Learn coding from scratch with our comprehensive bootcamp. Taught by industry experts, this program covers HTML, CSS, JavaScript, and more.</p>
+                            <p><span>Duration:</span> 6 months</p>
+                        </div>
+                        <div class="program">
+                            <h2>Cybersecurity Fundamentals</h2>
+                            <p>Get an introduction to cybersecurity and learn how to protect networks, systems, and data from cyber threats.</p>
+                            <p><span>Duration:</span> 4 months</p>
+                        </div>
+                        <div class="program">
+                            <h2>Entrepreneurship Skills</h2>
+                            <p>Master the essential skills needed to become a successful entrepreneur, from idea generation to business planning and execution.</p>
+                            <p><span>Duration:</span> 8 months</p>
+                        </div>
+                        <div class="program">
+                            <h2>Fundamentals of Business</h2>
+                            <p>Learn the core principles of business management, marketing, finance, and operations to kickstart your entrepreneurial journey.</p>
+                            <p><span>Duration:</span> 6 months</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="teachers">
+                <h2>Meet Our Teachers</h2>
+                <div class="teacher-grid">
+                    <div class="teacher">
+                        <h3>John Doe</h3>
+                        <p>With over 10 years of experience in software development, John is passionate about teaching coding to aspiring developers.</p>
+                    </div>
+                    <div class="teacher">
+                        <h3>Jane Smith</h3>
+                        <p>As a certified cybersecurity expert, Jane brings real-world experience to her classes, helping students grasp complex concepts.</p>
+                    </div>
+                    <div class="teacher">
+                        <h3>Michael Johnson</h3>
+                        <p>Michael is a seasoned entrepreneur with multiple successful ventures. He shares his insights and strategies with aspiring business owners.</p>
+                    </div>
+                    <div class="teacher">
+                        <h3>Sarah Lee</h3>
+                        <p>With an MBA in finance, Sarah provides valuable knowledge and expertise in business management and financial planning.</p>
+                    </div>
+                    <div class="teacher">
+                        <h3>Sarah Lee</h3>
+                        <p>With an MBA in finance, Sarah provides valuable knowledge and expertise in business management and financial planning.</p>
+                    </div>
+                    <div class="teacher">
+                        <h3>Sarah Lee</h3>
+                        <p>With an MBA in finance, Sarah provides valuable knowledge and expertise in business management and financial planning.</p>
+                    </div>
+                </div>\>
+                </div>
+                </div>
+    <div class="enrollment">
+        <h2>Enroll Now and Shape Your Future</h2>
+        <p>Don't miss out on these life-changing opportunities. Take the first step towards your dreams today!</p>
+        <a href="/enroll.html" target="blank"><button>Enroll Now</button></a>
+        </div>
+                
+                </body>
+                </html>

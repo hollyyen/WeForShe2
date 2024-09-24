@@ -1,0 +1,635 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <title>Investor Connect</title>
+</head>
+    
+<body>
+    
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo img {
+        width: 100px;
+        height: auto;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #07949b;
+        font-size: 20px;
+        transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: #105659;
+    }
+
+    .nav-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .login-button, .register-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .login-button {
+        background-color: #07949b;
+        color: #fff;
+    }
+
+    .login-button:hover {
+        background-color: #105659;
+    }
+
+    .register-button {
+        background-color: #07949b;
+        color: #fff;
+    }
+
+    .register-button:hover {
+        background-color: #105659;
+    }
+
+    .button1{
+        background-color: #ffffff;
+        color: #aaaaaa;
+        padding: 15px 30px;
+        border: floralwhite;
+        cursor: pointer;
+        border-radius: 5px;
+        border-color: black;
+        color: #07949b; /* Text color */
+        font-size: 18px; /* Font size */
+        font-weight: none; /* Font weight */
+        font-family: 'Arial', sans-serif; /* Font family */
+        text-transform: camelcase; /* Transform text to uppercase */
+        letter-spacing: 1px; /* Add spacing between letters */
+        transition: transform 0.3s; 
+    }
+    .connect{
+        position: absolute;
+         font-weight: 9000;
+        margin-top: 120px;
+        color: #010203; /* Text color */
+        font-size: 55px; /* Font size */
+        font-family: Rubik;
+         letter-spacing: -1.5px;
+        text-align: center; /* Align text: left, right, center, justify */
+        
+    }
+    .login-button, .register-button {
+        background-color: #896fc9;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .button1:hover{
+         transform: scale(1.1); 
+    }
+    .login-button:hover, .register-button:hover {
+        background-color:;
+    }
+
+    .content {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        height: 700px;
+        width: 2000px;
+        position: relative;
+    }
+
+    .hero-image {
+        width: 2000px; /* Adjust as needed */
+        margin-bottom: 10px;
+        object-fit: cover;
+        clip-path: circle(60% at center);
+        overflow: hidden;
+        opacity: 30%;
+        
+    }
+    .connectbox{
+        fill: 
+    }
+    #headingconnect{
+        box-sizing : 10px;
+        font-weight: 20;
+    }
+    .hero-buttons {
+        display: flex;
+        gap: 30px;
+        margin-top: 20px;
+        position: absolute;
+        margin-top: 500px;
+        font-size: 20px;
+    }
+
+    /*  */
+    .objectives-section {
+        padding: 40px 20px;
+        background-color: #ffffff; /* Light background for contrast */
+        margin: 20px 0;
+        display: justify;
+        text-align: center;
+        width : 50%;
+        display: grid;
+        place-items: center; 
+        margin-left : 500px;
+        justify-content: center;
+    }
+
+    .objectives-title {
+        
+        font-size: 45px;
+        color: #333;
+        text-align: center;
+        margin-bottom: 30px;
+        font-family: 'Poppins', sans-serif; /* Replace with desired font */
+    }
+
+    .objectives-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        gap: 20px; /* Space between items */
+    }
+
+    .objective {
+        background-color: transparent; /* Remove background color */
+        border: none; /* Remove border */
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .objective:hover {
+        transform: scale(1.02); /* Slightly scale up on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .objective h3 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+        font-family: 'Poppins', sans-serif; /* Replace with desired font */
+    }
+
+    .objective p {
+        font-size: 16px;
+        color: #666;
+    }
+
+
+
+    
+
+    .stat-box {
+        background-color: lightyellow;
+        padding: 2px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s;
+        display: flex;
+        flex-direction: row;
+        margin-right: 10px ;
+    }
+
+    .stat-box:hover {
+        background-color: #f0f0f0;;
+        color: white;
+    }
+
+    </style>
+    <!-- Navbar -->
+    <nav class="navbar">
+         <div class="logo">
+             <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo">
+         </div>
+         <ul class="nav-links">
+             <li><a href="/Mentorship.html">About Us</a></li>
+             <li><a href="/investors.html" target="blank">About Investors</a></li>
+             <li><a href="/Inspiring.html">For Founders</a></li>
+             <li> <a href="/contac.html" target="blank">Contact Us </a></li>
+         </ul>
+         <div class="nav-buttons">
+             <a href="/login_2.html" target="blank"><button class="login-button">Login</button></a>
+             <a href="/register.html" target="blank"><button class="register-button">Registration</button></a>
+         </div>
+     </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="https://media.licdn.com/dms/image/v2/C4E12AQHqNsOPK7E5jA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1526423110326?e=1731542400&v=beta&t=ot6JeiTSgWN6Do3mRAvXtPCqB0Dsufwklzf7pc7Fntg" alt="Animated Investor" class="hero-image" width = max> <!-- Replace with an animated image -->
+             <div class="connect">
+<h2 id="headingconnect">INVESTOR CONNECT</h2></div>
+            <div class="hero-buttons">
+                
+                <button class="button1" onclick="window.location.href='/forstartup.html';">For Startups</button>
+
+                <button class="button1" onclick="window.location.href='/forinvestors.html';" >For Investors</button>
+            </div>
+        </section>
+        <!-- Objectives Section -->
+        <section class="objectives-section">
+            <h2 class="objectives-title">Our Objectives</h2>
+            <hr></hr>
+            <div class="objectives-container">
+                <div class="objective">
+                    <img src="https://investorconnect.startupindia.gov.in/wp-content/uploads/TechPowered.svg" style="width: 200px; height: 100px;">
+                    <h3>AI Based Matchmaking</h3>
+                    <p>Use AI Based Matchmaking to connect startups with investors</p>
+                </div>
+                <div class="objective">
+                    <img src="https://investorconnect.startupindia.gov.in/wp-content/uploads/Investors.svg " style="width: 200px; height: 100px;">
+                    <h3>Investment Opportunities</h3>
+                    <p>Facilitate Investment in Startups</p>
+                </div>
+                <div class="objective">
+                    <img src="https://investorconnect.startupindia.gov.in/wp-content/uploads/Market.svg" style="width: 200px; height: 100px;">
+                    <h3>Marketplace</h3>
+                    <p>Create a virtual marketplace of investors for innovative startups</p>
+                </div>
+                <div class="objective">
+                    <img src="https://investorconnect.startupindia.gov.in/wp-content/uploads/InvestmentOpportunity.svg" style="width: 200px; height: 100px;">
+                    <h3>Access in Emerging Cities</h3>
+                    <p>Enable connects between investors and startups in emerging cities</p>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .stats {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                font-family: 'Arial', sans-serif;
+            }
+            .stat {
+                display: flex;
+                align-items: center;
+                margin: 20px;
+            }
+            .stat-number {
+                font-size: 36px;
+                color: #4CAF50; /* Adjust color as needed */
+                margin-right: 10px;
+            }
+            .stat-text {
+                font-size: 24px;
+                color: #333;
+            }
+        </style>
+        </head>
+        <body>
+
+        <div class="stats">
+             <div class="stat-box">
+            <div class="stat">
+               
+                <div id="startups" class="stat-number">0</div>
+                <div class="stat-text"> + Startups Created</div>
+            </div>
+            <div class="stat">
+                <div id="invested" class="stat-number">0</div>
+                <div class="stat-text">+ Investment Made</div>
+            </div>
+            <div class="stat">
+                <div id="opportunities" class="stat-number">0</div>
+                <div class="stat-text">+ Opportunities</div>
+            </div>
+            <div class="stat">
+                <div id="responded" class="stat-number">0</div>
+                <div class="stat-text">+ Total Responses</div>
+            </div>
+            </div>
+        </div>
+
+        <script>
+            // Function to animate numbers
+            function animateNumber(id, start, end, duration) {
+                let element = document.getElementById(id);
+                let range = end - start;
+                let increment = end > start ? 1 : -1;
+                let stepTime = Math.abs(Math.floor(duration / range));
+                let current = start;
+
+                let timer = setInterval(() => {
+                    current += increment;
+                    element.textContent = current;
+                    if (current == end) {
+                        clearInterval(timer);
+                    }
+                }, stepTime);
+            }
+
+            // Start animations
+            window.onload = () => {
+                animateNumber('startups', 0, 500, 2000); // Example: from 0 to 500 in 2000ms
+                animateNumber('invested', 0, 300, 2500); // Example: from 0 to 300 in 2500ms
+                animateNumber('opportunities', 0, 200, 1500); // Example: from 0 to 200 in 1500ms
+                animateNumber('responded', 0, 150, 3000); // Example: from 0 to 150 in 3000ms
+            };
+        </script>
+    </div>
+    
+</body>
+</html>
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Investors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo img {
+            width: 100px;
+            height: auto;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #896fc9;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #e84393;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .login-button, .register-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-button {
+            background-color: #896fc9;
+            color: #fff;
+        }
+
+        .login-button:hover {
+            background-color: #e84393;
+        }
+
+        .register-button {
+            background-color: #896fc9;
+            color: #fff;
+        }
+
+        .register-button:hover {
+            background-color: #e84393;
+        }
+
+        .content {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #896fc9;
+            color: #ecf0f1;
+        }
+
+        .investors, .funds {
+            padding: 40px 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 1200px;
+            background-image: url('kanak.jpg');
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .investors h2, .funds h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        .investor, .fund {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .investor:hover, .fund:hover {
+            transform: translateY(-10px);
+        }
+
+        .investor img, .fund img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .investor-info, .fund-info {
+            max-width: 600px;
+        }
+
+        .investor-info h3, .fund-info h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        .contact-info {
+            margin-top: 10px;
+        }
+
+        .contact-info a {
+            text-decoration: none;
+            color: #896fc9;
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        .contact-info a:hover {
+            color: #e84393;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+    </style>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="/Mentorship.html">About Us</a></li>
+            <li><a href="/investors.html" target="blank">About Investors</a></li>
+            <li><a href="/Inspiring.html">For Founders</a></li>
+            <li> <a href="/contac.html" target="blank">Contact Us </a></li>
+        </ul>
+        <div class="nav-buttons">
+            <a href="/login_2.html" target="blank"><button class="login-button">Login</button></a>
+            <a href="/register.html" target="blank"><button class="register-button">Registration</button></a>
+        </div>
+    </nav>
+
+<div class="content">
+    <h1>About Our Investors</h1>
+</div>
+
+<section class="investors">
+    <h2>Investors of Indian Origin</h2>
+    <div class="investor">
+        <img src="data:image/webp;base64,UklGRrAdAABXRUJQVlA4IKQdAAAwnACdASo+AT4BPpFCm0slo6klJbQrISASCWduiTi0x9nM9w5edRrx5ZRmhXIE2e+ovRLbPdX+xZ1UKllbSsefn+O6Iz/i8tn7L/wPYP6W/pAGKLDnjUfdsgwD4VBIQYsrHe3Nuk0DeKIV0tv8+ipUxSE/rdDUd+Fhtn710OcjPJYr5bzSpSqyMQlIAmVdn4PMp/4Dln4zMENkG1HFRFXc7DWldhvEEgCUa3D6+EJF2UZLp6qNf3uX4g7XqPbSK0AxsBzFNedN7K0bBXmGqq//m+mTx5pbX7++17fc5SM+J4EehB/yvs8Lr/Yves8zZ2j4CvJ44mCqxU4p5P6Nxmfo1fztjZJFvIc6F5U7lwJpGOLLEssTiO7oQgycafT28WMd7K8HVqo9OpFRBgIKk/O2Rr/s0KDmke+B/WPJPPh+4KbK+lbjyuAbQOI/qwdPgwRFTfVqxg+j0AGmcw6epkNu0EGCPZWgFtUENL/sb/qPJ9FlCfIfXAfqBrVru1qGQkUyF4MpHwuo98tssOdkcLxHhT4VzziLfspB1w7E7Gt7Mz3dsrQCjiUbGzRz1Znt8oRi7yEF/ppuOrZB/Q5FKrp4F1X5o1zhSD9DwCmR1h91zt7zwH7jWytAKmFTc+BFEUgJmJMT9om+6UwuZACSUZjT0Fr5nKEod10WSbfQBlKhhqBV2N8e9lYnEA0MiFJEs0vK0GSxKo7HMKhYezQl6ud163lXAdloDjui1vkc3OYVlaODgwde6hm29KCtxjhVKKf/P76d/6pPUBN+LXTDznYt3i8MPkcSNyygcly++bmpqEHt+gTAa3vrUx/Q8tS5hPkGxpZKh5ECzaTSdLUsYyDF7XgOTNRUXNHceAf/GxivrmeLoqBIDTaGIpyUv1Wq7Ogtlegw9bgpEdal3JShcFAD1W0/eStUqJ9gWglI3it1qmCKEyXda6d6YQfXVaIUGrjt6lzGemK5TZ64oHmnC8jK2MBp7fd/mC/IGAxotHbi2h1G0tj/jWCUawNLB95rIg6fL9hLEcSg9EdqPhOskIDCf8k5ycDSPi6yKYNrcGN/Tg1nUW+zhrw200+e+jjEsv5ZpmzxhoYHj2UWsS+vrJXDexYj/1fG1OHPmUyHGZ3dTjSqUsag7toTj8INe2+ZhuZEJ84FG1WKjE7DIJUw7+zbbmEqe0uMlU2n3m0QwztaoW2EiGUZs2gp2N8R4ALwcJy6SGMgTYuEHI2Bfq3RlwSoh+WXeFJRWhCVD/2xRxxAssHSCF4GjJKY+z9iAm3TeppN/5Fej5H4s7RoWzVgqRWRMCTWXiLUj8RE0Y2EXgFzsD377yQl32UvG+/OK1Z2eHOB5XQywvNF/gTG0gS8mG8kgjFAYSxzxl664C+KDMvVrcVSjafLberNTPPMNdYDECOFXUlm8ca1uWEo/YiMVLHmvaOVq2/h+XSwYSsN968IMakDmZCzHvB0GHGrxFU5ISozIrzsQpko10jYSB35MFaupFLfB6VYQ6QrIgFHtVDuSQxwc/XAxJak2uQqfIvsOCmYLP6VO4ycAe7LneisN20J1uDdZ7N6uQnDd568L94boDAm+usbwt6OXV8hCtJJyPo3m+/mMbbZYUb48rtHpQ1QYcBaXPlfyet8vRmXS0saAWZIuhOWlDUlOLRf3Rlr8AdgFxhaKiumepgAAP60SvcvSeeFckB/EDZNV+OAxrpnFpBsmMiQ5bxlHzVIsHyCEoaowQw9Pd+lQQidB3b0an9+LxHUiyn5GA2fZrPNICUgiVD8LksAdGyzVErcQoAdESGTx5/lCxJFbDOteK4t3Oq5JgeLZx/J55etEX3ETnKlohDGgUuRx1/q14Y3U4tXp3NeFq4U8/JuGoE3kSnGMYZ4mZyZUvi80cFadnWqP47sePKCm/9sLE7ee786LwcO9MdNcGy1IGCk0JH5f3i1WYZJ33NFzyeLjyLqhWtUyJxmE0CiOX3TowaeuhOE9bQncZObB1iFO31mPMwa1Wus4BcIgFvmADZPz1O+YbRB1QDjd1c02+C2ccSJh3PKksCTOqUGhpVDIDCFPFudHGhrm9E+z2y+vRf9WXM1aBiDTQ+Jblcw1L3IOfGqc3RCROaoZj/EAxcZbq6CiO3Qw5Hpn9o4+9JYzvUf8RrP1ftZB4NrpGFL8afQ4sRuvhkjdy4LC2qHvBhNx3tGiDalY900U0mRgwkwKGexhU7UWf7k9uHGaBgZc9/tvyNQ+DkQ7RCq02+S/31g03fs+i3rbio06iZpQQlsIAf2D0/wG8LwxAFuxMcjOAtHIow7nvKiu69/86c6PS4g22VD18afIwjwCqewDADADM+d8ybP2tp37sJPtiYUme/B6kV59BGEFwLUwWuyH0O6InKhFvV6EqKCPVVnXjCKODfpuCJOGrfmljOapsantu/5+PlJ3F/HIN4uAiyeKVfGPY0iYUmh+BI9x4h1Rn8jDZJy2/gmN18aVUJ7NtqzXVF/aHs+gj8UxfUncyRb2OFwpaq9fxpotTGrn7Z1IvLf/iKXuCGwuEapzrFk2rqe6K6XQm+yRasTQJue7OLKSC1B9nGg0+aGPLNWDQduv5hgdKSH8FIIE1YktMojZrOg1XVPeHOEFOEAQo9PZH6JdlXP712OgIkMYuycgLKh6cmhLRTskCUdy5KjZwmmNwyDOERVn1E4f0+w5nhEPQ/CiHywv3CYpyox6GSopjKh3EGs+idBOV4gjC7DP0oaf5aCqncsn+wFrCG+cl6G/y6uiAjDlB8ygwyYtS0A8GUXoi4wqtMJDaZclzQxbfr/+CuZdtBpmGJ8GBe1HxsXQRHb36WGaVvbAijzqEF+hB+JYtRtB371wKRdSLKVKUFw4rIjFHuV5V3BXdayQpK1KxxuRawlLBwb5mY2PuLLxmOEBF881ArWfoLo1312nM6r/ARvXDRcO9z0PG2SbrWdURToJcMk/E4YPrROYHV4VxY3lExJ8iNx3TAG9UJwsggbqHfqgb7S9neMSJBo1NzhYH6fcNahf1ebwThg3HUU+bLd3eyjvW6PCSaz3iZFQon0ftQIC6myvYk8KilVsVElg2kLH+0gNhSXdwZkdKlWHNODvNlEjb/jXv+0IEi/U836Mamc8ycAiWBUsNSpWSDnrybx/tfUQL/GbIc1pnb0MGWyePGkSYNLQPDqVIf2P9SIubnaHxwuLuXW56zfRg3qRa40RxueTs9mbK43GekgUuJ+Is7pyQNqsPfnIQCcrHiDhrAku7F9FCw+H4QWDQf3P2cevTUktqLLSbbyWgtCNT38C8NPxgotpNoUHbxeMHFK/3hZP5A+lhWtyXlJSA8FeJttY9F7HO5o3l+VskLNq5vTKxCdPqfAT3ZUv7WcL+c9IIPPALP8L7T28gOynHCmC6cEFQnzRBH69vqg34P/QjViVo/mY18R0BRvdxX1hG5+lCF5S9P6KRwvoN69c7wJmD6CUViMOe2D1rtHSfnUx/NDvuO7ZriSFN8AfWZgJJpeKv5uc2ph27zzr2Sg8XwjPJ76L6Z0VCH6bJI0RMXY271wKzvyrz8VXY93d+7j7SzoTlu+RrM3wXMJc/TUeBAgxtos7R9C+dKkG8qgiY53nt4F0ftmAlqCqVIPfO2K373FYSLqYG6nrxCCRu6IeKEaItcTdMayC32ksi6BfI/k1f2Sp8JG5iuAoMxZl0CDh+SNPpNJJsWRcbOnTxoQiMt0KGg9vBoWGo2slHug0WqJFtnpNy1asWPPUBlplCs4K7V8XSOMjhLXLJ3huiaa3ywYv0jHOXOvWcEdGhKIR2BZe+G1BSZoZcVq9WuKs99H5cbWuOcJx6E8zDHL3uhg6MPKU1ZXCz1AoTv1pNtFFmU+Psr9OjFNxSLtdNBFGDRC24DkON+R7IgoNoFYLoNcWauJIf5Gh/+eQfys3Cqi9qKJr054PgnUAVeB5vxu7PYyteWY1RKf7vk/7mXygW4YsXNoUdMOfvRwxlL1S7ecptPjfcyA0OYpbivVdB7VoKAlk4bhy2/kI6MHAgqD9xQnS7+fubMF3bfepUGS97Mp5VpCrkJoEUuTrFtua6l+VpsVf3Fha8qgXZ2IcmZF6gALnGWB9QnLvUJyvkJMGecOC7rLpuVl0TK1zbLpk/DxqN+LYcZ0AiR2InARK0WpC3hJ4TDNo2ry2HqObtIX81dOaYtZk2ChgYjq+1buZrAIoSjJ3lQAJWYO36UXwHwV5jMCxb7gQ9trsHHDd9xz+CGuVAel+X/FWIBpdYD1y+8LvGYMuN6WaZmMACHfd5rmc8rMvsklbXVINlQOP1wuFZgCqWnpdxORmc/jSotIXkhk5CYIc5aJ8jy81kP++cpXwxEFoQfVnwjSBucYq2aOp8SzFG4AAM9nB8/fPWMBeRTFz73S/cUNsr+d4QCxAeALW6LvPD/mGvS31+3Yi/+svtmGFfjXPZy+tboyhLYNJ0eda26xR9Dc5HaEMNGnnWIHkHXFUJHzgRgakcUZgkofJPxTuRjSA6nbRX1xM17mp7tohdcd2irq01De4iRJu99Ib++CFjLegE3iUFe+QxGjrFoKHzghyCwPvr9IP8PqeGOqNj+PylRofDqbqeXO+AaDGWOK0rHbkk8nbFA2YQj7S3WqRCQOF8HTgVmNirNrDHe16uCjlLbzj0icH48wZOJXsJ77/mTgoA3XdSVKDeZA1rft6CpfosX2phyJ0IThwJdDHUjbSixIk9pMwdSxOhLxUAGrXyQRwwHrojUamNhRUmwIyqN4XwkQo7IUa5Y3QXAYXh2ylXmTCsNfk42CakdHKKzZ09ogMIfkPNgnOHTKynVInbkGh0YT6XfHdQZnlqFZGMjhx2Xfz+ajsBVXfnwsd3nlkoeyUFlUj+ozn46Msj+t6yeHjCmZcpEhGVaUsW9eqnKYmwbDalF/ztyhOSSZbfXK3hkAPJ6hcYODhi2R2F1fPn6PXDO4+PnSQPIGuwx2aCIgYQR7W0OzB5fj2N8rHkfPeIGdn7yNem05IY7OX1va90DZxC/K5WyWy8US1gEFP7POHKWPe5B2QiRVgcVQhOAYB1QLvd0qMBrv7uQrWDKTXyIRegvux+pEPtef4OJJThKy2Lisqb5J1gvjuHDh3EVJKfasvNnfY1jzPFxkEe8ymZ+QTfVZoilDPSP24q7xHoB7ISmu17iu8NH+nphclETBVKtA373+WkFaRmtIJ11pPAgZFkzO9C6vU/0iKWExiAg/1QchrsvzyNZixxDMIi5raSDvpzCbtPXnJTbTFeKanJONu/li1sBCSTC5L1CMSfF5lHmHnXx8ri4xN4G+yB2bEjJ7u00IstmBUkeugWZckswdIv7gSDFW/e9LSB4PgRqdgIewSAMwip6KS/ZaVI4pxkcJFd2AUArawOQ+PSlo2NUHLP6zXws3LeRsu/afr7gNq15AjAb4DOXcILRwrpE2QwfIEdj4A+tpu88s1uD7+7oN0rpdcyR9vz9ntT5zflkV3W07xgSSaMM5e9IMBPMcrBlgb+x6wo3IhQICvSWg3hqUnO2NJrPlEOFv8rctPpGkLJcYiZ8dJepa8QGw46/l/Zw1MepgvcdHVnEvERUeEY5CJ89ZPn85NQq+alsj3HWauDCQ6/t1m/TG6DESQIJg9K0Cd/DTTrCxdE24CkGLpACdNzPol/TIlAVeO5vq3kGFdIqOJ6TwL9Ru7Rjk/RoWRdcLTLMiKoMaUxp4XBbo42jvVPxFL/8v8X5cesVAn6fwkgL5qYbmVOJJRwgK4ERuhWZJ5n2+5hEjYMv9MOru7Gp3EpSFKvgPaRhpABLLHVl8RzRXMdOYLdNnFh6lXZQ9GZZWoE9yWUP3gdempRe5rV6DD7mrUokQKeMnHzaf8soV2uxS+er2bT30aRVd9sc+OxQM1M80tj79veu0kQtkH784D62/ieoaMPOGxWLwJusmAsoGabj0LSLZLgN/gtsaPJQrGlAdhms2W6O9Evh+7aZV0D9O4du/w5QJh1yNW1BZFgQQ9tIo2lspwkGsk1mgjFlfU25ob8TxxJmbQop4Mr7Li++wKu9WK9ZfxuHrcs6HwZ8jywtp69TXsVKn/3t6irIHQqvmEYEUheEM0hNx8b9u0qEtnWC1wMZVJKmaM89El77u/B/UMaZ2TwFF7wJfKuxP2k4kQtTY+UcYXMxTOTNFwDFLOkr/3CQcDLTLCjgUA37aQCvNlYdDhEs3iFnxw57tXUBG6BALqdq/yE5uWKBnuwLCOdQRr77I5dPu1U26uiK0UE8yfxM6fT/4a5xcue7+umwy0UgoZfFAFTa4GTzUXetRoN0RThFEnPqMEtlCN4EHD9jeX3ZoBT7a2uxf03tG9kW2VqBbGyEgJhnHNKZdDQ3DnP2bMMvbF8Gv5SilmvCyr2E6Uqoj3X47ORqAFCdFCOqOvaCGarENMMeljugtoby9Ry31fG5mQqjzckXA2CtZwxFJq/K1V7tlZsDIgE3lRA0zQ7bctncfnwOOA63jBjTDEH32TYy1g3CexrfTR+FyADOHRHdS+CU/fsGTTTCmLiPcABt3rDaPyIiSXTX8dcmOx4ANue5sB2X85QO4HPJJE+09rLUC0fIhjKPbNU6ovEkeOkmChvqqQ/C+OioVzYPTPWTSS85laFtAl8Io3BfOqTxz59Od+uG12+y8ylwLlvOMF2XeV6BJ8Zc8nGLNRXNC1ODSJex6BrdUfxXZksfUw5bhwEYQuelF4STY+hMkteOsYcwOX5Cb9QO74IhpuiqmXqEGaCWNVmr5+ka4Mwv4dkwVK8DnKSlAyPwwQiubzJcv4ZfRa2WpcX//S24pheJDRaGhqt2iv22nltQfpNKCIYAK/WbOHCMpS2y6aHDepvsq7NTkJtRhMb0MKLgAXvz1c9hAmJFAhpGyyCy1Apb0YuMvQmiU3FJw4m6BEC1/xujO6TBHdNCvfSEdSX28+jmB7ea9MHt+0foonUkxg0cscSf5oW7K/tHewjDhU+u5B8QHGqJBiPx0enGu40mO9demXB3SCa6eRl9srKarkUvqihEqWW+dEs05BXIr9eWstWcfP2E40wzH0FABgzCcHbTkGXCeuRhGSeV03CkN7/d51LwOZISP+uKCtllfb+Cdp4kkrdBwpbDo4/UQUf0lzKpMw9G64gW8lOJXzeVCt9tnyVX9L4FMvvS/DAnakgBdJfWyBOYOzlqdUVzGJq5Y+ZoymCHjMbkyL6h53RWNDUU7/xD7DtnBLVaS6MviOhWJvHpX0TKF/DKvz2V0JbHBjzJZGiAYbZMuKf7zh3FtNCSI5RDUcvUPMyJI3sD+r/ft+WZb3+asSKESYH+Hg8Pp5/BOpjjUPg/juul0VgD6BwfVtBp+JZ5rrbIo9bNT6brgU85tvzU2T8R9socwirkv/A2G53KDwlBujXCt1lSFo7pnXLrqfEormc7/QwfXgwSM3VUdneqJ86LfGEd4ixWG+mxXpIKks3MCGbpNx3rzv9GU6r4x1Zif/VV8AVsrpOXe6cjcb2Yb3fmlWxLemAmcJAtLjXmGff4zenJjgvMW2nQt2uORme07QYekVE75UiATHjm4fp2vyfqD/eOwtBN+mHWbCwzEzFrK6n/vPeLSJU9iagcQeJ/ORSWaCLAePEuuMg1xBNozKA0QLjqjObIuiHck3c0f0CwbWgONi4d51J1gXlukC+wpxvQzPcorUcLLla8vNm6Yal+oePFhAPh6y0JiuK1MHprsQspen8h9u293CDaXk2eZOlAVYKF2l0x9hDzS0HxcGpBU0hkaoWUFwXk3LQqO4PFzw3Rd5GeM/divfNqfXMkeOAWuD5kJZcBj1VT79CCuF3CfSRwG5OQNAnByTnNqeaLaOeq2qGJdj0au+5NuJbikvhfCWsdcylkYe9VILIxyLtaWuUgIawwH8avdiZOO/yJB3UuwmIfOBQZmkFFw9j6/fu2A0eAJGsb+BZsHCdwimQ9pA8jWfoGmyBzFswIXZGZ4qiohf6nUD3ElKJLdNhuVZq8Kdzo5uxvhoVKgtd9zlrWUmhSuSulalQVvQonu9OzY5NG6BYSnJJ2ll84KiDTQSiqjbysfWBERiKT+LNwM+99p4g+1MOVdFHoFapCZhlQqBdk5mQ2m6Dou9C70vqCagiX3VneA5/r+IzLyDIvjx8KoZ4+vMfW/rXafyhq8S5HKmbg2qqrKnHWKLtbgDeA4mriXaLtM9LVycBsYwmZbv1zdO0zkehBxA9TWtEehri7tG5tC5lo+M4D0Fa7NeYCfI/sQTeiEXcg3UDvbMzWo/F/BMqZagOURPdow/CJKiWd143ErKdlJjq3w58D6yAvVe2fJq8m0jFmSEoimLS+zAr+YuSTLziEs1I016oEWzqoW8zgL22VHPYNie2jPslwdKVr9JDFjDPkKpgoWqzaansdkoIj7l8m107teqJtfp8juS7CqYgLEQnEISPIVuhZI+wK/iYZmy2ZxWD08PzRBJ7JdPeO0+3NF3LD6gqQHrX3LuYmpp+85VDlgaMnZWFv1m9Dc2LGYsVWlh5nYogWOn63F3fPja1ry8kVhMg/ftp9/DF6bLFk5t/Xf0FyPjKxtGHU4ezb/amq6JzxB1GazTcDQ4+WQpy5lUXqracW5g4m1O3plbXMZ4T2mco8+tFklHeoygdnSqc9m9Mihwjaj98cSeoxQnbZp70IM2OzvyTn3wfgUkfwDVnFuzaBXfr3vWh3GN02x94bml0IsIMNZZsDcRqkW3g/SEsjDU5QHTi2en0Yl7U4LWDrfjMtTd2gmpTeWVVtLW3BrfJkcNXH+g4keMtwpTWvpPkWbBLDNfDrYHvZCqWH8gs+ROumsgQE/WZ/U1gvBTVuhIx62u4Kq4pLtq1a2EoErZ4hthaY/PxC48c5EG8SpOdKM/29kufLOg/6+McEW79zFXpya4REvUkSmGIBGkEMt59GVF1Y5+l/LnGU8DW2pSaKM4lC8ulEGx14OGyors9JH9zpGw2WsO1vK3/t18m5x4Hl1VrATuvIpN0uS/ahRPdXR4d7h7eQK79XV4YGrAtH+DVmpb18GHL8gVADkE1mT8Cj8uswIrzZUTVo7d/ZlhzWJi6S2K/j8jWYTegjAtky9YUlu5kpthS8GbEz1qsZWuwyk9Ms6JN2HCI77lBKniDG0BlhOPZ0HQyD1Q98tpZORaCviTVTr9jaICwifBpixdFK2xoW08SeL5cGtTPQyEzS7saRGSUqLmzc77/Wg9DycGPDQfKxvnaqQHDlKkkY41ClQjAShju680J4SoIyiGGzTCqr3W5jZLdBCk2RJ/lT+6AqgLPfK+P+1CFxPsGSTlElYVZD9SD/CM5sToSUBDtjIXYu1mKjLp2v6TTPm07mbedE9XdESnpf5vm1/mEVYXJBwpVGSEJxX9UvfLpeo1vGBhGH9/wYvfM5J0Tvgy3iSr19h2rQ4is2Od11MZoCRsjeh3hfL/YTkDIOr9/QiFL314TqiaPjovo5RD6/EUOI7A4YBl9vOFFlmn+SpvPg7XanlxGu5O//8i1hWujdIRSIde8o56QaSKau28JUL6i0Dj1f3okVRwSDiOMPUlayomYe6IfOLmaSFw2hddys/H0aYta4W8Rg5Pz4VD1lkduKQ6JtQlvOEYGhlRC7ES735Vr5Nxmm9xnLQ5f+SoHbNvnezGWBaHxrH5K4eDh2ukNslB4ZgHCTy7U3jMVK8Iz8RL+a5muqcinO68ZRJ2JIP5Kdn11q3W45u//0/NvMJzuUqqXKykCsP0bt4vVSSNTRq3bevgf4j9evQxEgDGyhJnH9FTDNiA3OnbGrJRNptt6hlD6OXqHqSkP8aOF/7XLQf9onxJpNVKRkRCWFj+GNd5OLiyEshLsP8wpgpSa1FCvkm6a9vMjQn+JLkELBRCs9VwbUokKbRdvc7UywNjPmVR9NwE98B1RAQT5PTuH1Tefbbrn+wxwdWUExcRBUfn0YCScQHq3EBJYGLT84uzSMsmiGNK9yHLPDrtpaLc7Wkp5Wgr2O0ILZ3H+rQHRxqVGXEZnSjZMU8eE10WHgD6DA/CeIX6mjsceksOMKHOg4T2z94xw90ERFec+k5dKBEV+siiWN6cbdRb5idmKs17XobGkU3TqkCAv2ALX5zh6L9BaeY7vIvfgAA" alt="Investor 1">
+        <div class="investor-info">
+            <h3>Ratan Tata</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+            <div class="contact-info">
+                <a href="tel:+1234567890">Phone: +1234567890</a>
+                <a href="mailto:investor1@example.com">Email: investor1@example.com</a>
+                <a href="sms:+1234567890">Message: +1234567890</a>
+            </div>
+        </div>
+    </div>
+    <div class="investor">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Azim_H._Premji_World_Economic_Forum_2013.jpg" alt="Investor 2">
+        <div class="investor-info">
+            <h3>Azim Premji</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+            <div class="contact-info">
+                <a href="tel:+0987654321">Phone: +0987654321</a>
+                <a href="mailto:investor2@example.com">Email: investor2@example.com</a>
+                <a href="sms:+0987654321">Message: +0987654321</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="funds">
+    <h2>Funds</h2>
+    <div class="fund">
+        <img src="fund1.jpg" alt="Fund 1">
+        <div class="fund-info">
+            <h3>Fund Name 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+            <div class="contact-info">
+                <a href="tel:+1122334455">Phone: +1122334455</a>
+                <a href="mailto:fund1@example.com">Email: fund1@example.com</a>
+                <a href="sms:+1122334455">Message: +1122334455</a>
+            </div>
+        </div>
+    </div>
+    <div class="fund">
+        <img src="fund2.jpg" alt="Fund 2">
+        <div class="fund-info">
+            <h3>Fund Name 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+            <div class="contact-info">
+                <a href="tel:+2233445566">Phone: +2233445566</a>
+                <a href="mailto:fund2@example.com">Email: fund2@example.com</a>
+                <a href="sms:+2233445566">Message: +2233445566</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Our Company. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+ -->

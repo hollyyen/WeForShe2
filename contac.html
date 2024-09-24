@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Contact Us</title>
+     <link rel="stylesheet" href="styles.css">
+ </head>
+   <style>
+     body {
+         font-family: Arial, sans-serif;
+         background-color: #f2f2f2;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         margin: 0;
+     }
+
+     .container {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+     }
+
+     .contact-card {
+         background-color: #fff;
+         padding: 40px;
+         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+         border-radius: 8px;
+         width: 360px;
+         text-align: center;
+     }
+
+     .logo {
+         /* Add your logo styling here */
+     }
+
+     .contact-title {
+         font-size: 30px;
+         font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+         margin-bottom: 20px;
+         margin-top: -10px;
+         color: #896fc9;
+     }
+
+     .input-group {
+         position: relative;
+         margin-bottom: 30px;
+         text-align: left;
+     }
+
+     input[type="text"],
+     input[type="email"],
+     textarea {
+         width: 100%;
+         padding: 10px 0;
+         font-size: 16px;
+         border: none;
+         border-bottom: 1px solid #dadce0;
+         background: transparent;
+         outline: none;
+     }
+
+     textarea {
+         resize: vertical;
+         height: 100px;
+     }
+
+     label {
+         position: absolute;
+         top: 10px;
+         left: 0;
+         font-size: 16px;
+         color: #80868b;
+         pointer-events: none;
+         transition: 0.2s ease all;
+     }
+
+     input:focus ~ label,
+     input:valid ~ label,
+     textarea:focus ~ label,
+     textarea:valid ~ label {
+         top: -20px;
+         font-size: 12px;
+         color: #1a73e8;
+     }
+
+     .contact-button {
+         width: 100%;
+         padding: 10px 0;
+         background-color: #896fc9;
+         color: #fff;
+         font-size: 16px;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+     }
+
+     .contact-button:hover {
+         background-color: #d6307c;
+     }
+
+   </style>
+ <body>
+     <div class="container">
+         <div class="contact-card">
+             <img src="" alt="" class="logo">
+             <h1 class="contact-title">Contact Us</h1>
+             <form>
+                 <div class="input-group">
+                     <input type="text" id="name" name="name" required>
+                     <label for="name">Name</label>
+                 </div>
+                 <div class="input-group">
+                     <input type="email" id="email" name="email" required>
+                     <label for="email">Email</label>
+                 </div>
+                 <div class="input-group">
+                     <input type="text" id="subject" name="subject" required>
+                     <label for="subject">Subject</label>
+                 </div>
+                 <div class="input-group">
+                     <textarea id="message" name="message" required></textarea>
+                     <label for="message">Message</label>
+                 </div>
+                 <button type="submit" class="contact-button">Send Message</button>
+             </form>
+         </div>
+     </div>
+ </body>
+ </html>
